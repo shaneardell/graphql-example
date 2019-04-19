@@ -1,0 +1,12 @@
+h1 = @user.full_name
+
+- @user.posts.each do |post|
+  h2
+    = link_to post.title, post_path(post)
+    small
+      = time_ago_in_words(post.created_at)
+    = post.published ? 'Published' : 'Draft'
+
+  p
+    = post.body.truncate(27, separator: ' ')
+    
