@@ -19,5 +19,7 @@ A `post` belongs to a `user`.
 
 1. Add a `posts` field to the user type to allow you to list posts for an individual user.
 
-1. Add a `createPost` mutation to allow you to create a lemur via GraphQL
+1. Add a `createPost` mutation to allow you to create a post via GraphQL
+
+1. Bonus: Add a query for a single user.
 
