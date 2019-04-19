@@ -3,6 +3,10 @@ module Types
     graphql_name 'Query'
     description 'The query root of this schema'
 
-    # field :resource_name, resolver: Resolvers::ResourceName, null: true, description: 'Description goes here'
+    field :users, [Types::UserType], null: false, description: 'A list of users'
+
+    def users
+      User.all
+    end
   end
 end
