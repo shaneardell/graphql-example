@@ -1,0 +1,19 @@
+h1 New User
+
+== form_for @user, html: { multipart: true } do |f|
+  == render 'shared/form_errors', resource: @user
+
+  .form-group.row
+    == f.label :first_name, class: 'col-sm-2 col-form-label'
+    .col-sm-10
+      == f.text_field :first_name, autofocus: true, autocomplete: "name", class: 'form-control'
+
+  .form-group.row
+    == f.label :last_name, class: 'col-sm-2 col-form-label'
+    .col-sm-10
+      == f.text_field :last_name, autofocus: true, autocomplete: "name", class: 'form-control'
+
+  .actions.d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pt-3.pb-2.mb-3
+    == link_to 'Back', :back
+    == f.submit 'Save', class: 'btn btn-primary'
+
