@@ -1,8 +1,9 @@
 h1 Users
 
-= link_to 'Add User', new_user_path
+.d-flex.flex-row-reverse
+  = link_to '+ Create User', new_user_path
 
-table
+table.table
   thead
     tr
       th Last Name
@@ -13,5 +14,5 @@ table
       tr
         td = user.last_name
         td = user.first_name
-        td
+        td = link_to 'View Posts', user_path(user)
     

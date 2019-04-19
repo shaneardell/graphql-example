@@ -10,9 +10,11 @@ html
 
   body
 
+  == render 'layouts/navigation'
+
   #main_content.container-fluid
-    .row
-      main.col-md-9.ml-sm-auto.col-lg-10.px-4 role='main'
+    .row.mt-5
+      main.col-md-11.ml-sm-auto.col-lg-11.px-4 role='main'
         == render 'layouts/messages'
         == yield
 
