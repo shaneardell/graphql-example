@@ -1,24 +1,23 @@
-# README
+# GraphQL Example
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Starting Point
 
-Things you may want to cover:
+The `master` branch is a barebones Rails app that has two models:
 
-* Ruby version
+<p align="center">
+  <img src="erd.png" width="300">
+</p>
 
-* System dependencies
+A `user` has many `posts`.
+A `post` belongs to a `user`.
 
-* Configuration
+## To Do:
 
-* Database creation
+1. Install `graphql` gem (https://github.com/rmosolgo/graphql-ruby)
 
-* Database initialization
+1. Add a `users` query that returns a list of users.
 
-* How to run the test suite
+1. Add a `posts` field to the user type to allow you to list posts for an individual user.
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Add a `createPost` mutation to allow you to create a lemur via GraphQL
 
-* Deployment instructions
-
-* ...
